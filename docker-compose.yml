@@ -8,20 +8,14 @@ services:
       - "traefik.enable=true"
       - "traefik.http.routers.ca298-universitysystem.entrypoints=https"
       - "traefik.http.routers.ca298-universitysystem.rule=Host(`universitysystem.jakefarrell.ie`)"
-    networks:
-      - ca298-universitysystem
 
   ca298-universitysystem-backend:
     image: scrineymvm/ca298restassignment:latest
     container_name: ca298-universitysystem-backend
     hostname: ca298-universitysystem-backend
     restart: unless-stopped
-    networks:
-      - ca298-universitysystem
 
 networks:
   default:
     name: traefik_net
     external: true
-  ca298-universitysystem:
-    driver: bridge
