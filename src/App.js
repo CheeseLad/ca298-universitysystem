@@ -4,7 +4,7 @@ function App() {
   return (
     <div className="home-page">
       <h1>University Management System</h1>
-      <h2><i>Created by Jake Farrell - 22349856</i></h2>
+      <h2><i>Created by Jake Farrell</i></h2>
         <a href="/degrees" className="btn btn-primary create-button">View All Degrees</a>
         <a href="/cohorts" className="btn btn-primary create-button">View All Cohorts</a>
         <a href="/modules" className="btn btn-primary create-button">View All Modules</a>
