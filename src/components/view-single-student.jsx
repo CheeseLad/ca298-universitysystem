@@ -6,7 +6,7 @@ function ViewSingleStudent() {
   const { student } = useParams();
 
   useEffect(() => {
-    fetch(`http://127.0.0.1:8000/api/student/${student}/`)
+    fetch(`${process.env.REACT_APP_API_URL}/api/student/${student}/`)
       .then((response) => response.json())
       .then((data) => setData(data))
       .catch((error) => console.error('Error fetching data:', error));

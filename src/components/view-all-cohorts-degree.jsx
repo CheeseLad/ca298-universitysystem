@@ -6,7 +6,7 @@ function ViewAllCohortsDegree() {
   const { degree } = useParams();
 
   useEffect(() => {
-    let apiUrl = "http://127.0.0.1:8000/api/cohort/";
+    let apiUrl = `${process.env.REACT_APP_API_URL}/api/cohort/`;
     if (degree) {
       apiUrl += `?degree=${degree}`;
     }
