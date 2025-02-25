@@ -59,8 +59,6 @@ MIDDLEWARE = [
 CORS_ALLOWED_ORIGINS = [
     "http://localhost:3000", # node on port 3000
     "http://127.0.0.1:3000",  # node on port 3000
-    "http://localhost:3014", # CheeseLad - for deployment
-    "http://127.0.0.1:3014",  # CheeseLad - for deployment
     "https://universitysystem.jakefarrell.ie", # CheeseLad - for deployment
 ]
 
