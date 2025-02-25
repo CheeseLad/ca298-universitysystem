@@ -18,7 +18,7 @@ const CreateNewModule = () => {
     
 
     try {
-      const response = await fetch('http://127.0.0.1:8000/api/module/', {
+      const response = await fetch(`${process.env.REACT_APP_API_URL}/api/module/`, {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json'
@@ -44,7 +44,7 @@ const CreateNewModule = () => {
 
   const updateCohort = (input) => {
     const cohorts = input.split(", ");
-    const urls = cohorts.map(cohort => `http://127.0.0.1:8000/api/cohort/${cohort}/`);
+    const urls = cohorts.map(cohort => `${process.env.REACT_APP_API_URL}/api/cohort/${cohort}/`);
     return urls;
   };
   

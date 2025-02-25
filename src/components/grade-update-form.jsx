@@ -15,7 +15,7 @@ const UpdateStudentForm = ({ grade, module, onUpdate }) => {
     }
 
     try {
-      const response = await fetch(`http://127.0.0.1:8000/api/grade/${grade.id}/`, {
+      const response = await fetch(`${process.env.REACT_APP_API_URL}/api/grade/${grade.id}/`, {
         method: 'PATCH',
         headers: {
           'Content-Type': 'application/json'

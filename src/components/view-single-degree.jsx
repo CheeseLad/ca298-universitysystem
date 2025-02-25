@@ -6,7 +6,7 @@ function ViewSingleDegree() {
   const { degree } = useParams();
 
   useEffect(() => {
-    fetch(`http://127.0.0.1:8000/api/degree/${degree}/`)
+    fetch(`${process.env.REACT_APP_API_URL}/api/degree/${degree}/`)
       .then((response) => response.json())
       .then((data) => setData(data));
   }, [degree]);

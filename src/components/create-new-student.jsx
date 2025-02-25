@@ -12,12 +12,12 @@ const CreateNewStudent = () => {
     e.preventDefault();
 
     try {
-      const response = await fetch('http://127.0.0.1:8000/api/student/', {
+      const response = await fetch(`${process.env.REACT_APP_API_URL}/api/student/`, {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json'
         },
-        body: JSON.stringify({ student_id: studentId, first_name: firstName, last_name: lastName, cohort: `http://127.0.0.1:8000/api/cohort/${cohort}/`, email: email })
+        body: JSON.stringify({ student_id: studentId, first_name: firstName, last_name: lastName, cohort: `${process.env.REACT_APP_API_URL}/api/cohort/${cohort}/`, email: email })
       });
 
       if (response.ok) {

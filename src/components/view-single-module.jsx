@@ -6,7 +6,7 @@ function ViewSingleModule() {
   const { module } = useParams();
 
   useEffect(() => {
-    fetch(`http://127.0.0.1:8000/api/module/${module}/`)
+    fetch(`${process.env.REACT_APP_API_URL}/api/module/${module}/`)
       .then((response) => response.json())
       .then((data) => setData(data))
       .catch((error) => console.error('Error fetching data:', error));

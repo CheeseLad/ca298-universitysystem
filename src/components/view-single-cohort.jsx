@@ -6,7 +6,7 @@ function ViewSingleCohort() {
   const { cohort } = useParams();
 
   useEffect(() => {
-    fetch(`http://127.0.0.1:8000/api/cohort/${cohort}/`)
+    fetch(`${process.env.REACT_APP_API_URL}/api/cohort/${cohort}/`)
       .then((response) => response.json())
       .then((data) => setData(data));
   }, [cohort]);
