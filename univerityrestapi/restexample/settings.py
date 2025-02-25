@@ -25,7 +25,7 @@ SECRET_KEY = 'django-insecure-h5n-2ebm8h^-+$(61)ys!#7huohz0o2uut+sevg%j$qo4x24*3
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ["*"]
 
 
 # Application definition
@@ -60,6 +60,7 @@ CORS_ALLOWED_ORIGINS = [
     "http://localhost:3000", # node on port 3000
     "http://127.0.0.1:3000",  # node on port 3000
     "http://localhost:80", # CheeseLad - for deployment
+    "http://127.0.0.1:80",  # CheeseLad - for deployment
     "https://universitysystem-api.jakefarrell.ie" # CheeseLad - for deployment
 ]
 
